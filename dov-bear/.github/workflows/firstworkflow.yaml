@@ -19,5 +19,5 @@ jobs:
       - name: building app
         run: go build
 
-      - name: list the repo after build
+      - name: list the repo after build test
         run: ls -l /
