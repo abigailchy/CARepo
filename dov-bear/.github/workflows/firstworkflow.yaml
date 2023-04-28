@@ -3,15 +3,15 @@ on:
   push:
 jobs:  
     build_dot_net:
-    runs-on: ubuntu-latest
-    steps:
-    - name: setup golang
-      uses: actions/setup-go@v4
-      with:
-        go-version: '^1.13.1'
+      runs-on: ubuntu-latest
+      steps:
+      - name: setup golang
+        uses: actions/setup-go@v4
+        with:
+          go-version: '^1.13.1'
 
-    - name: checkout source
-      uses: actions/checkout@v3
+      - name: checkout source
+        uses: actions/checkout@v3
 
-    - name: building app
-      run: go run hello.go
+      - name: building app
+        run: go run hello.go
