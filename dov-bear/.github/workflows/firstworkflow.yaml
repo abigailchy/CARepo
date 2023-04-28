@@ -1,4 +1,4 @@
-name: My first flow
+name: building go application
 on: 
   push:
 jobs:  
@@ -13,5 +13,11 @@ jobs:
       - name: checkout source
         uses: actions/checkout@v3
 
+      - name: list the repo before build
+        run: ls -l /
+
       - name: building app
         run: go build
+
+      - name: list the repo after build
+        run: ls -l /
