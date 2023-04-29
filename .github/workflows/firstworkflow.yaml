@@ -13,7 +13,7 @@ jobs:
       - name: checking out sources
         uses: actions/checkout@v3
 
-      - name: deploy railway with secret tokens
+      - name: deploy railway with secret token
         uses: bervProject/railway-deploy@main
         with:
           railway_token: ${{secrets.RAILWAY_TOKEN}}
@@ -68,7 +68,7 @@ jobs:
                       "emoji": true
                     },
                     "value": "click_me_123",
-                    "action_id": "button-action"
+                    "url": "${{ secrets.RAILWAY_URL }}"
                   }
                 }
               ]
