@@ -4,7 +4,7 @@ on:
     branches:
       - 'master'
       - 'releases/v#.#'
-jobs:  
+jobs:
     build_go:
       runs-on: ubuntu-latest
       steps:
