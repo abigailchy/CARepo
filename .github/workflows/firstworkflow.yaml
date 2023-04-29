@@ -1,6 +1,9 @@
 name: building go application
 on: 
   push:
+    branches:
+      - 'master'
+      - 'releases/v#.#'
 jobs:  
     build_go:
       runs-on: ubuntu-latest
