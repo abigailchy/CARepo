@@ -8,7 +8,7 @@ jobs:
       - name: checkout source
         uses: actions/checkout@v3
 
-      - name: deploy railway
+      - name: deploy railway with secret token
         uses: bervProject/railway-deploy@main
         with:
           railway_token: ${{secrets.RAILWAY_TOKEN}}
