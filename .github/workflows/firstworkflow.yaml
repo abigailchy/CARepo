@@ -19,7 +19,7 @@ jobs:
           railway_token: ${{secrets.RAILWAY_TOKEN}}
           service: "shocking-partner"
       
-      - name: linking slack with github webhook
+      - name: linking slack with github webhooks
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
         with:
