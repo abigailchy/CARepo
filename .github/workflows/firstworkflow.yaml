@@ -20,53 +20,53 @@ jobs:
         with:
           payload: |
             {
-	            "blocks": [
-		            # {
-			          #   "type": "section",
-			          #   "text": {
-				        #     "type": "mrkdwn",
-				        #     "text": "*DipSA 56 CI/CD Submission*"
-			          #   }
-		            # },
-		            # {
-			          #   "type": "section",
-			          #   "fields": [
-				        #     {
-					      #       "type": "mrkdwn",
-					      #       "text": "*Name:* Choong Hui Ying, Abigail"
-				        #     },
-				        #     {
-					      #       "type": "mrkdwn",
-					      #       "text": "*Email:* E1112632@u.nus.edu"
-				        #     },
-				        #     {
-					      #       "type": "mrkdwn",
-					      #       "text": "*Matric Number:* A0127295Y"
-				        #     },
-				        #     {
-					      #       "type": "mrkdwn",
-					      #       "text": "*Repository:*\nto fill in"
-				        #     }
-			          #   ]
-		            # },
-		            {
-			            "type": "section",
-			            "text": {
-				            "type": "mrkdwn",
-				            "text": "URL goes here"
-			            },
-			            "accessory": {
-				            "type": "button",
-				            "text": {
-					            "type": "plain_text",
-					            "text": "Go",
-					            "emoji": true
-				            },
-				            "value": "click_me_123",
-				            "action_id": "button-action"
-			            }
-		            }
-	            ]
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*DipSA 56 CI/CD Submission*"
+                  }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Name:* Choong Hui Ying, Abigail"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Email:* E1112632@u.nus.edu"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Matric Number:* A0127295Y"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Repository:*\nto fill in"
+                    }
+                  ]
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "URL goes here"
+                  },
+                  "accessory": {
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Go",
+                      "emoji": true
+                    },
+                    "value": "click_me_123",
+                    "action_id": "button-action"
+                  }
+                }
+              ]
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
