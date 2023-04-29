@@ -68,7 +68,8 @@ jobs:
                       "emoji": true
                     },
                     "value": "click_me_123",
-                    "url": "${{ secrets.RAILWAY_URL }}"
+                    "url": "${{ secrets.RAILWAY_URL }}",
+                    "action_id": "button-action"
                   }
                 }
               ]
