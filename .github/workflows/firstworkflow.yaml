@@ -13,7 +13,7 @@ jobs:
       - name: checking out sources
         uses: actions/checkout@v3
 
-      - name: deploy railway with secret token
+      - name: deploy railway with secret tokens
         uses: bervProject/railway-deploy@main
         with:
           railway_token: ${{secrets.RAILWAY_TOKEN}}
