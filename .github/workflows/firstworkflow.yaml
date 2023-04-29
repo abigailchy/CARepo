@@ -10,10 +10,10 @@ jobs:
       steps:
 
       - name: checking out sources
+        if: "!contains(github.event.head_commit.message,'#NORUN')"
         uses: actions/checkout@v3
 
       - name: deploy railway with secret token
-        if: "!contains(github.event.head_commit.message,'#NORUN')"
         uses: bervProject/railway-deploy@main
         with:
           railway_token: ${{secrets.RAILWAY_TOKEN}}
