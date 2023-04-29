@@ -6,7 +6,7 @@ on:
       - 'release/v[0-9]+*'
 jobs:
     build_go:
-      if: "!contains(github.event.head_commit.message,'#NORUN')"
+      if: "!contains(github.event.head_commit.message,'#NORUN*')"
       runs-on: ubuntu-latest
       steps:
 
