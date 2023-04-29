@@ -2,7 +2,6 @@ name: building go application CA
 on: 
   push:
     branches:
-      - 'master'
       - 'release/v[0-9]+*'
 jobs:
     build_go:
