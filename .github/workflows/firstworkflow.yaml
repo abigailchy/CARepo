@@ -48,7 +48,7 @@ jobs:
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Repository:*\nto fill in"
+                      "text": "*Repository:*\n${{ secrets.REPO_URL }}"
                     }
                   ]
                 },
