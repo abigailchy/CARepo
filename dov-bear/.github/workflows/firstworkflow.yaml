@@ -5,19 +5,11 @@ jobs:
     build_go:
       runs-on: ubuntu-latest
       steps:
-      - name: setup golang
-        uses: actions/setup-go@v4
-        with:
-          go-version: '1.16.1'
-
       - name: checkout source
         uses: actions/checkout@v3
 
-      - name: list the repo before build
-        run: ls -l /
-
-      - name: building app
-        run: go build
-
-      - name: list the repo after build test
-        run: ls -l /
+      - name: deploy railway
+        uses: bervProject/railway-deploy@main
+        with:
+          railway_token: ${{secrets.RAILWAY_TOKEN}}
+          service: "my-service"
