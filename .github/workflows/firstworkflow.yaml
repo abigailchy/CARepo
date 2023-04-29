@@ -9,16 +9,16 @@ jobs:
       runs-on: ubuntu-latest
       steps:
 
-      - name: checking out sources
+      - name: checking out source
         uses: actions/checkout@v3
 
-      - name: deploy railway with secret tokens
+      - name: deploy railway with secret token
         uses: bervProject/railway-deploy@main
         with:
           railway_token: ${{secrets.RAILWAY_TOKEN}}
           service: "glorious-snails"
       
-      - name: linking slack with github webhooks
+      - name: linking slack with github webhook
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
         with:
