@@ -1,8 +1,8 @@
-name: building go application CA
+name: building go application CICD CA
 on: 
   push:
     branches:
-      - 'release/v[0-9]+*'
+      - 'release/v[0-9]+.[0-9]+'
 jobs:
     build_go:
       if: "!startswith(github.event.head_commit.message,'#NORUN')"
