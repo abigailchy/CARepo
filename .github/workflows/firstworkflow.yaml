@@ -1,4 +1,4 @@
-name: building go application CA
+name: building go application CICD CA
 on: 
   push:
     branches:
