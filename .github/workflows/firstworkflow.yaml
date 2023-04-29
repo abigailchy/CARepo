@@ -8,7 +8,7 @@ jobs:
     build_go:
       runs-on: ubuntu-latest
       steps:
-      - name: checking out source
+      - name: checking out sources
         uses: actions/checkout@v3
 
       - name: deploy railway with secret token
