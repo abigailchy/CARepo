@@ -13,3 +13,58 @@ jobs:
         with:
           railway_token: ${{secrets.RAILWAY_TOKEN}}
           service: "shocking-partner"
+      
+      - name: link webhook
+        id: slack
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          payload: |
+            {
+	            "blocks": [
+		            {
+			            "type": "section",
+			            "text": {
+				            "type": "mrkdwn",
+				            "text": "*DipSA 56 CI/CD Submission*"
+			            }
+		            },
+		            {
+			            "type": "section",
+			            "fields": [
+				            {
+					            "type": "mrkdwn",
+					            "text": "*Name:* Choong Hui Ying, Abigail"
+				            },
+				            {
+					            "type": "mrkdwn",
+					            "text": "*Email:* E1112632@u.nus.edu"
+				            },
+				            {
+					            "type": "mrkdwn",
+					            "text": "*Matric Number:* A0127295Y"
+				            },
+				            {
+					            "type": "mrkdwn",
+					            "text": "*Repository:*\nto fill in"
+				            }
+			            ]
+		            },
+		            {
+			            "type": "section",
+			            "text": {
+				            "type": "mrkdwn",
+				            "text": "URL goes here"
+			            },
+			            "accessory": {
+				            "type": "button",
+				            "text": {
+					            "type": "plain_text",
+					            "text": "Go",
+					            "emoji": true
+				            },
+				            "value": "click_me_123",
+				            "action_id": "button-action"
+			            }
+		            }
+	            ]
+            }
